@@ -7,14 +7,98 @@
 	</head>
 	<body>
         <div class="canvas-wrapper">
-            <canvas id="backcolor" width="300" height="300"></canvas>
-            <canvas id="graphcolor" width="300" height="300"></canvas>
+            <canvas id="backcolor" width="400" height="400"></canvas>
+            <canvas id="graphcolor" width="400" height="400"></canvas>
+            <canvas id="commentcolor" width="400" height="400"></canvas>
         </div>
-        <div class="palette">
+        <div class="palette1">
+            <h4>背景色々</h4>
             <ul>
-                <li><span class="">■</span>/<span class="">■</span></li>
-                <li><span class="">■</span>/<span class="">■</span></li>
-                <li><span class="">■</span>/<span class="">■</span></li>
+                <li onclick="graphDraw(233,78,102,1);backDraw(238,227,217,1);commentDraw(136,123,146,1);">
+                    <span style="color:rgba(233,78,102,1);">■</span>
+                    <span style="color:rgba(238,227,217,1);">■</span>
+                    <span style="color:rgba(136,123,146,1);">■</span>
+                </li>
+                <li onclick="graphDraw(11,22,68,1);backDraw(233,78,102,1);commentDraw(238,227,217,1);">
+                    <span style="color:rgba(11,22,68,1);">■</span>
+                    <span style="color:rgba(233,78,102,1);">■</span>
+                    <span style="color:rgba(238,227,217,1);">■</span>
+                </li>
+                <li onclick="graphDraw(243,174,204,1);backDraw(178,177,187,1);commentDraw(235,230,237,1);">
+                    <span style="color:rgba(243,174,204,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                    <span style="color:rgba(235,230,237,1);">■</span>
+                </li>
+                <li onclick="graphDraw(0,173,122,1);backDraw(150,208,182,1);commentDraw(246,244,216,1);">
+                    <span style="color:rgba(0,173,122,1);">■</span>
+                    <span style="color:rgba(150,208,182,1);">■</span>
+                    <span style="color:rgba(246,244,216,1);">■</span>
+                </li>
+                <li onclick="graphDraw(253,211,92,1);backDraw(54,54,98,1);commentDraw(234,230,192,1);">
+                    <span style="color:rgba(253,211,92,1);">■</span>
+                    <span style="color:rgba(54,54,98,1);">■</span>
+                    <span style="color:rgba(234,230,192,1);">■</span>
+                </li>
+                <li onclick="graphDraw(237,111,0,1);backDraw(251,203,114,1);commentDraw(39,43,87,1);">
+                    <span style="color:rgba(237,111,0,1);">■</span>
+                    <span style="color:rgba(251,203,114,1);">■</span>
+                    <span style="color:rgba(39,43,87,1);">■</span>
+                </li>
+                <li onclick="graphDraw(255,240,193,1);backDraw(218,65,72,1);commentDraw(33,22,10,1);">
+                    <span style="color:rgba(255,240,193,1);">■</span>
+                    <span style="color:rgba(218,65,72,1);">■</span>
+                    <span style="color:rgba(33,22,10,1);">■</span>
+                </li>
+            </ul>
+        </div>
+        <div class="palette2">
+            <h4>背景白寄り</h4>
+            <ul>
+                <li onclick="graphDraw(221,220,214,1);backDraw(248,247,240,1);commentDraw(178,177,187,1);">
+                    <span style="color:rgba(221,220,214,1);">■</span>
+                    <span style="color:rgba(248,247,240,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                </li>
+                <li onclick="graphDraw(210,65,71,1);backDraw(249,248,249,1);commentDraw(178,177,187,1);">
+                    <span style="color:rgba(210,65,71,1);">■</span>
+                    <span style="color:rgba(249,248,249,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                </li>
+                <li onclick="graphDraw(240,145,153,1);backDraw(249,248,249,1);commentDraw(178,177,187,1);">
+                    <span style="color:rgba(240,145,153,1);">■</span>
+                    <span style="color:rgba(249,248,249,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                </li>
+                <li onclick="graphDraw(238,240,160,1);backDraw(249,248,249,1);commentDraw(178,177,187,1);">
+                    <span style="color:rgba(238,240,160,1);">■</span>
+                    <span style="color:rgba(249,248,249,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                </li>
+                <li onclick="graphDraw(115,198,200,1);backDraw(249,248,249,1);commentDraw(178,177,187,1);">
+                    <span style="color:rgba(115,198,200,1);">■</span>
+                    <span style="color:rgba(249,248,249,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                </li>
+                <li onclick="graphDraw(75,116,176,1);backDraw(249,248,249,1);commentDraw(178,177,187,1);">
+                    <span style="color:rgba(75,116,176,1);">■</span>
+                    <span style="color:rgba(249,248,249,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                </li>
+                <li onclick="graphDraw(173,128,175,1);backDraw(249,248,249,1);commentDraw(178,177,187,1);">
+                    <span style="color:rgba(173,128,175,1);">■</span>
+                    <span style="color:rgba(249,248,249,1);">■</span>
+                    <span style="color:rgba(178,177,187,1);">■</span>
+                </li>
+                <li onclick="graphDraw(174,211,237,1);backDraw(251,250,245,1);commentDraw(248,181,0,1);">
+                    <span style="color:rgba(174,211,237,1);">■</span>
+                    <span style="color:rgba(251,250,245,1);">■</span>
+                    <span style="color:rgba(248,181,0,1);">■</span>
+                </li>
+                <li onclick="graphDraw(0,59,144,1);backDraw(252,252,250,1);commentDraw(188,207,213,1);">
+                    <span style="color:rgba(0,59,144,1);">■</span>
+                    <span style="color:rgba(252,252,250,1);">■</span>
+                    <span style="color:rgba(188,207,213,1);">■</span>
+                </li>
             </ul>
         </div>
 	</body>
