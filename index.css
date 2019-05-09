@@ -21,6 +21,14 @@
     position: absolute;
     left: 400px;
 }
+#palette .palette4 {
+    position: absolute;
+    left: 600px;
+}
+#palette .palette5 {
+    position: absolute;
+    left: 800px;
+}
 #palette div ul li span {
     font-size: x-large;
 }
