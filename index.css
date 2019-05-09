@@ -6,9 +6,21 @@
     top: 0;
     left: 0;
 }
-.palette1 {
-    margin-left: 30%;
+#palette {
+    position: relative;
+    left: 350px;
 }
-.palette2 {
-    margin-left: 60%;
+#palette .palette1 {
+    position: absolute;
+}
+#palette .palette2 {
+    position: absolute;
+    left: 200px;
+}
+#palette .palette3 {
+    position: absolute;
+    left: 400px;
+}
+#palette div ul li span {
+    font-size: x-large;
 }
