@@ -71,10 +71,58 @@ function commentDraw(red, green, blue, alpha) {
   ctx.fill();
 }
 
+function getColor() {
+  var jsonHtml = "";
+  let spanTag = document.getElementsByTagName('span');
+  var count = 1;
+  for (var i = 0; i < spanTag.length; i++) {
+    let res = spanTag[i].style.color.split(',');
+    if (res != "") {
+      var amari = i % 4;
+      if (amari === 0) {
+        jsonHtml += '"' + count + '" : {<br>';
+        count++;
+        jsonHtml += '&nbsp;&nbsp;&nbsp;&nbsp;"graph" : {<br>';
+      }
+      if (amari === 1) {
+        jsonHtml += '&nbsp;&nbsp;&nbsp;&nbsp;"bg" : {<br>';
+      }
+      if (amari === 2) {
+        jsonHtml += '&nbsp;&nbsp;&nbsp;&nbsp;"accent" : {<br>';
+      }
+      for (var k = 0; k < res.length; k++) {
+        var str = res[k].replace(/[rgb(]/g, "")
+        str = str.replace(/[)]/g, "")
+        if (k === 0) {
+          jsonHtml += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"r" : ' + str.trim() + ',<br>';
+        }
+        if (k === 1) {
+          jsonHtml += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"g" : ' + str.trim() + ',<br>';
+        }
+        if (k === 2) {
+          jsonHtml += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"b" : ' + str.trim() + ',<br>';
+          jsonHtml += '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"a" : 1<br>';
+        }
+      }
+      if (amari == 2) {
+        jsonHtml += "&nbsp;&nbsp;&nbsp;&nbsp;}<br>"
+      } else {
+        jsonHtml += "&nbsp;&nbsp;&nbsp;&nbsp;},<br>"
+      }
+
+      if (amari === 2) {
+        jsonHtml += "},<br>"
+      }
+    }
+  }
+  document.getElementById('json').innerHTML = jsonHtml;
+}
+
 (function(){
     window.onload = function() {
         graphDraw(255,255,255,1);
         backDraw(0,0,0,1);
         commentDraw(100,100,100,1);
+        getColor();
     };
 })();

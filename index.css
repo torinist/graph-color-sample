@@ -23,13 +23,16 @@
 }
 #palette .palette4 {
     position: absolute;
-    top: 450px;
+    left: 600px;
 }
 #palette .palette5 {
     position: absolute;
     top: 450px;
-    left: 200px;
 }
 #palette div ul li span {
     font-size: x-large;
+}
+#json {
+    position: relative;
+    top: 400px;
 }
